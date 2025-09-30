@@ -1,0 +1,15 @@
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.weekdays li {
+  display: inline-block;
+  width: 13%;
+}
+.days li {
+  display: inline-block;
+  width: 13%;
+}
