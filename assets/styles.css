@@ -1,3 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Funnel Sans", sans-serif;
+  color: black;
+  background-color: #eff7f6;
+}
+header{
+  color: black;
+  text-align: center;
+  background-color: #F7F7F7;
+  position: relative;
+  display: block;
+}
+nav ul{
+  display: flex;
+  background-color: #d81e5b;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+  display: inline;
+  display: flex;
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px
+}
+nav ul li a:hover{
+  color: wheat;
+   background-color: #b4184c;
+}
+main{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 16px;
+  border: 2px solid #a6a0ba;
+  border-radius: 20px;
+}
+section{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e4d8c5;
+}
+.services{
+  float: left;
+  width: 47%;
+  height: 400px;
+  background-color: white;
+  padding-left: 11px;
+  padding-right: 11px;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.services img{
+  display: block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.btn{
+  all: unset;
+  text-decoration: none;
+  background-color: #d81e5b;
+  color: white;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 700px;
+  font-size: 16px;
+  border: 2px solid #b8195a;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+}
+p:has(.btn){ 
+  text-align: center;
+}
+footer{
+  background-color: #a59c96;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  padding: 16px;
+  margin-top: 32px;
+}
+footer a{
+  color: black;
+}
+footer a:hover{
+  color: white;
+}
+
+
+
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
