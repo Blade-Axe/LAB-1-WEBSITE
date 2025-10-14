@@ -176,3 +176,12 @@ input[type=text], select, textarea {
     margin-right: 10%;
   }
 }
+.date{
+  color:dodgerblue;
+}
+.newpara{
+  color: dodgerblue;
+}
+.newList{
+  color: red;
+}
