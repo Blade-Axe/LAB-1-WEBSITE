@@ -17,6 +17,7 @@ header{
   position: relative;
   display: block;
 }
+
 nav ul{
   display: flex;
   background-color: #d81e5b;
@@ -37,6 +38,10 @@ nav ul li a:hover{
    background-color: #b4184c;
 }
 
+article ul li{
+  margin-left: 20px;
+}
+
 main{
   margin-top: auto;
   margin-bottom: auto;
@@ -52,6 +57,7 @@ section{
   margin-left: auto;
   margin-right: auto;
   background-color: #e4d8c5;
+  padding: 20px 0px;
 }
 .services{
   float: left;
@@ -109,6 +115,9 @@ footer a{
 footer a:hover{
   color: white;
 }
+.fa-solid.fa-bars{
+  visibility: hidden;
+}
 
 
 
@@ -126,4 +135,44 @@ input[type=text], select, textarea {
 .days li {
   display: inline-block;
   width: 13%;
+}
+@media only screen and (max-width:786px){
+  header{
+    height: 18vh;
+  }
+  header h1{
+    line-height: 50%;
+    display: inline-block;
+  }
+  nav ul{
+    display: block;
+  }
+  nav ul li{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  #wrapper{
+    position: relative;
+  }
+  nav{
+    position: absolute;
+    right: 10px;
+    top:20px;
+  }
+  .fa-solid.fa-bars{
+    visibility: visible;
+  }
+  .services{
+    width: 92%;
+    background-color: white;
+    padding: 24px 11px;
+    margin: auto auto 20px 15px;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+  main{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
