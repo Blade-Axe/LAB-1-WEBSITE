@@ -58,6 +58,7 @@ section{
   margin-right: auto;
   background-color: #e4d8c5;
   padding: 20px 0px;
+  overflow: hidden;
 }
 .services{
   float: left;
@@ -74,7 +75,6 @@ section{
   box-sizing: border-box;
 }
 .services img{
-  display: block;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -118,8 +118,6 @@ footer a:hover{
 .fa-solid.fa-bars{
   visibility: hidden;
 }
-
-
 form{
   display: flex;
 }
@@ -136,14 +134,6 @@ input[type="text"], textarea {
   font-size: medium;
   word-spacing: 4px;
   display: block;
-}
-.weekdays li {
-  display: inline-block;
-  width: 13%;
-}
-.days li {
-  display: inline-block;
-  width: 13%;
 }
 label{
   display: block;
