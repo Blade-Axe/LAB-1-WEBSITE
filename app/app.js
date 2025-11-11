@@ -1,0 +1,61 @@
+const express = require('express');
+const app = express();
+const path = require('path');
+
+// Set the view engine to EJS
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Set up static file serving
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Basic Approach: Render EJS template with static data
+app.get('/', (req, res) => {
+    res.render('index');
+});
+
+app.get('/classes', (req, res) => {
+    res.render('classes');
+});
+
+app.get('/contact', (req, res) => {
+    res.render('contact');
+});
+
+app.get('/schedule', (req, res) => {
+    res.render('schedule');
+});
+
+app.get('/hello', (req, res) => {
+    res.send("This is the request to Hello!")
+});
+
+app.get('/hello/:name', (req, res) => {
+    const routeParameter = req.params;
+    const name = routeParameter.name;
+    res.send(`Hello ${name}, welcome to my NodeJS application`)
+});
+
+/* 
+Advanced Approach: Render EJS template
+with asynchronously fetched data
+*/
+app.get('/dynamic', async (req, res) => {
+    const dynamicData = await fetchData();
+    res.render('dynamic', { data: 'dynamicData' });
+});
+
+// Function to simulate asynchronous data fetching
+async function fetchData() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve('Dynamic Content');
+        }, 1000);
+    });
+}
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});

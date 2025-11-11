@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <title>Global World Norwich Yoga Studio (GWNYS): Contact</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Max Smith">
+        <meta name="keywords" content="yoga, leg, legging, mat, ball, yoga ball, exercise, extra fries, minion meme">
+        <meta name="description" content="THE GLOBAL WORLD NORWICH YOGA STUDIO BROUGHT TO YOU BY BIG YOGA">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <script src="/script/core.js" defer></script>
+    </head>
+    <body>
+        <%- include('partials/nav.ejs'); %>
+        <main>
+            <section>
+                <div class="container">
+                    <h2>Contact Global World Norwich Yoga Studio</h2>
+                        <section>
+                            <form method="post" action="#" id="myForm">
+                                <fieldset>
+                                    <legend>Contact Form</legend>
+                                    <label for="name">Name:*</label>
+                                        <input type="text" id="name" name="name" placeholder="Your name.." required>
+                                    <label for="email">Email:*</label>
+                                        <input type="text" id="email" name="email" placeholder="Your email.." required>
+                                    <label for="subject">Subject:*</label>
+                                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px" required></textarea>
+                                    
+                                        <input type="submit" value="Send Message" id="submit">
+                                    <p id="confirmMessage">* Required Field</p>
+                                </fieldset>
+                            </form>
+                        </section>
+                </div> 
+            </section>
+        </main>
+        <%- include('partials/footer.ejs'); %>
+    </body>
+</html>
