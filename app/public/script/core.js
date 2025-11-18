@@ -41,10 +41,29 @@ if(document.getElementById("myForm")){
     let confirmMessage = document.getElementById("confirmMessage");
 
     myForm.addEventListener("submit", (e)=>{
-        e.preventDefault();   
-        confirmMessage.textContent=`Hi ${myName.value}, your message has been received, we will contact you at ${myEmail.value}`;
-    });
+        e.preventDefault();
+        const formBody = {
+            name:myName.value,
+            email:myEmail.value,
+            subject:subject.value
+        };
+        const requestHeaders = {
+            "Content-Type": "application/json"
+        }
+        fetch('/contact',{
+                method: 'POST',
+                headers: requestHeaders,
+                body: JSON.stringify(formBody)
+            })
+            .then(response => response.json())
+            .then((responseData) => {
+                console.log(responseData);
+                confirmMessage.textContent=`Hi ${myName.value}, your message has been received, we will contact you at ${myEmail.value}`;
+            })
+        
+    })
 }
+
 
 if(document.getElementById("schedule")){
     let mySchedule = document.getElementById("schedule");

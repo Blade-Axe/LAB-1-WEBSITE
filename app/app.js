@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true}))
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -34,6 +36,14 @@ app.get('/hello/:name', (req, res) => {
     const routeParameter = req.params;
     const name = routeParameter.name;
     res.send(`Hello ${name}, welcome to my NodeJS application`)
+});
+
+app.post('/contact', (req,res) =>{
+    console.log(req.body);
+    const name = req.body.name;
+    const email = req.body.email;
+    const subject = req.body.subject;
+    res.json({name:name, email:email});
 });
 
 /* 
